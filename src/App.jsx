@@ -54,7 +54,7 @@ function App() {
       return
     }
     setUserName(nameInput.trim())
-    setMessage('正解！次の鍵へ進もう。')
+    setMessage('')
     setScreen('map')
   }
 
@@ -65,7 +65,7 @@ function App() {
       return
     }
 
-    setMessage('')
+    setMessage('正解！次の鍵へ進もう。')
     setAnswerInput('')
     setShowHint(false)
 
@@ -161,6 +161,10 @@ function App() {
             <p className="mt-1 text-sm font-bold">{puzzle.zone}</p>
             <p className="mt-1 text-xs text-slate-700">{puzzle.title}</p>
           </div>
+
+          {message ? (
+            <p className="mt-3 rounded-lg bg-emerald-50 px-3 py-2 text-sm font-medium text-emerald-700">{message}</p>
+          ) : null}
 
           <button
             onClick={() => {
