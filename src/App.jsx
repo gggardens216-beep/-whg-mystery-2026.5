@@ -89,7 +89,9 @@ function App() {
           <h1 className="text-2xl font-bold leading-tight">水の丘 時巡りミステリー</h1>
           <p className="mt-3 text-sm leading-relaxed text-slate-600">
             あなたは2046年から届いた通信を受け取り、この庭園の記憶を辿ることになった。まずは冒険者の名前を登録しよう。
-          </p>
+            <br />
+          Water Hill Garden の記憶はあなたに託された。
+        </p>
 
           <div className="mt-6 space-y-3">
             <label htmlFor="player-name" className="text-sm font-medium text-slate-700">
@@ -224,7 +226,9 @@ function App() {
         <CheckCircle2 size={36} className="text-emerald-400" />
         <h2 className="mt-4 text-2xl font-bold">封印解除成功</h2>
         <p className="mt-3 text-sm leading-relaxed text-cyan-100">
-          {userName}、すべての鍵を解き明かした！\nWater Hill Garden の記憶はあなたに託された。
+          {userName}、すべての鍵を解き明かした！
+          <br />
+          Water Hill Garden の記憶はあなたに託された。
         </p>
         <button
           onClick={() => {
