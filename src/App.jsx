@@ -54,7 +54,7 @@ function App() {
       return
     }
     setUserName(nameInput.trim())
-    setMessage('')
+    setMessage('正解！次の鍵へ進もう。')
     setScreen('map')
   }
 
@@ -163,7 +163,10 @@ function App() {
           </div>
 
           <button
-            onClick={() => setScreen('play')}
+            onClick={() => {
+              setMessage('')
+              setScreen('play')
+            }}
             className="mt-4 rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white"
           >
             この謎に挑戦する
