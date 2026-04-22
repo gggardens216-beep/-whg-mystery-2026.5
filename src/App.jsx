@@ -17,6 +17,8 @@ const ZONE_COORDS = {
   '最終地点: 水の丘': { top: '45%', left: '50%' },
 }
 
+const MAP_BACKGROUND_URL = 'https://github.com/user-attachments/assets/bb77294b-ecc1-4d82-9224-feb8eab71af8'
+
 const PUZZLES = [
   { id: 1, zone: 'Zone A: 吉田観賞魚', title: '第一の鍵：始まりの年', description: 'この水の丘の歴史は古い。大正10年、初代・吉田定一がこの地に養殖場を開業したのが全ての始まりだ。大正10年は西暦何年だろうか？数字4桁で答えよ。', hint: '大正10年は西暦『1921』年だよ。', answer: '1921', color: 'text-blue-600 border-blue-200' },
   { id: 2, zone: 'Zone A: 吉田観賞魚', title: '第二の鍵：青き紋章', description: '吉田観賞魚のシンボルマーク（ロゴ）を見てみよう。二つの青い水滴が交わり、ある『水辺の生き物』の姿を描いている。漢字一文字で答えよ。', hint: '池の中を優雅に泳いでいる生き物だよ。', answer: '魚', color: 'text-blue-600 border-blue-200' },
@@ -128,7 +130,10 @@ function App() {
             <p className="text-xs text-slate-500">{currentPuzzleIndex + 1} / {PUZZLES.length}</p>
           </div>
 
-          <div className="relative mb-4 flex-1 rounded-2xl border border-cyan-100 bg-gradient-to-br from-cyan-50 to-emerald-50">
+          <div
+            className="relative mb-4 flex-1 rounded-2xl border border-cyan-100 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${MAP_BACKGROUND_URL})` }}
+          >
             {Object.entries(ZONE_COORDS).map(([zone, pos]) => {
               const isCurrent = zone === currentZone
               const isSolved = solvedZones.has(zone)
