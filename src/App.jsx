@@ -131,7 +131,7 @@ function App() {
           </div>
 
           <div
-            className="relative mb-4 flex-1 rounded-2xl border border-cyan-100 bg-cover bg-center bg-no-repeat"
+            className="relative mb-4 flex-1 rounded-2xl border border-cyan-100 bg-gradient-to-br from-cyan-50 to-emerald-50 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${MAP_BACKGROUND_URL})` }}
           >
             {Object.entries(ZONE_COORDS).map(([zone, pos]) => {
