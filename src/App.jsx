@@ -65,7 +65,7 @@ function App() {
       return
     }
 
-    setMessage('正解！次の鍵へ進もう。')
+    setMessage('')
     setAnswerInput('')
     setShowHint(false)
 
