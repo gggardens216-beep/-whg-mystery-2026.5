@@ -219,10 +219,6 @@ function App() {
       return typeof threshold === 'number' && currentIndex >= threshold
     }
 
-    void currentZone
-    void mapBackgroundUrl
-    void isZoneCompleted
-
     return null
   }
 
@@ -237,27 +233,6 @@ function App() {
   if (screen === 'play') {
     return null
   }
-
-  void Map
-  void ChevronRight
-  void HelpCircle
-  void PhoneIncoming
-  void PhoneOff
-  void Clock
-  void MapPin
-  void CheckCircle
-  void Terminal
-  void Radio
-  void Fingerprint
-  void nextPrologue
-  void registerName
-  void submitAnswer
-  void zones
-  void ZONE_COORDS
-  void ENTRANCE_COORDS
-  void DECLINE_MESSAGE
-  void showHint
-  void feedback
 
   return null
 }
