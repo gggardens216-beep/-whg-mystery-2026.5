@@ -30,7 +30,7 @@ const PUZZLES = [
   { id: 10, zone: '2046年からの通信', title: '真実の鍵', description: '全ての欠片が集まった。時を動かす最後の鍵、それはこの冒険を始めた「あなたの名前」だ。入力して封印を解け。', hint: '最初に登録した名前を入力して。', answer: 'USER_NAME', color: 'text-red-600 border-red-200' },
 ]
 
-const normalize = (v) => v.trim().replace(/\s+/g, '')
+const normalize = (value) => value.normalize('NFKC').trim().replace(/\s+/g, '').toLowerCase()
 
 function App() {
   const [screen, setScreen] = useState('prologue')
