@@ -8,13 +8,14 @@ import {
   MapPin,
   Send,
 } from 'lucide-react'
+import mapImage from './assets/map.png'
 
 const ZONE_COORDS = {
-  'Zone A: 吉田観賞魚': { top: '28%', left: '38%' },
-  'Zone B: GGガーデンズ': { top: '32%', left: '62%' },
-  'Zone C: Gardens Marché': { top: '58%', left: '68%' },
-  'Zone D: Au coju': { top: '62%', left: '42%' },
-  '最終地点: 水の丘': { top: '45%', left: '50%' },
+  'Zone A: 吉田観賞魚': { top: '33%', left: '40%' },
+  'Zone B: GGガーデンズ': { top: '39%', left: '60%' },
+  'Zone C: Gardens Marché': { top: '58%', left: '57%' },
+  'Zone D: Au coju': { top: '54%', left: '40%' },
+  '最終地点: 水の丘': { top: '47%', left: '52%' },
 }
 
 const PUZZLES = [
@@ -128,7 +129,15 @@ function App() {
             <p className="text-xs text-slate-500">{currentPuzzleIndex + 1} / {PUZZLES.length}</p>
           </div>
 
-          <div className="relative mb-4 flex-1 rounded-2xl border border-cyan-100 bg-gradient-to-br from-cyan-50 to-emerald-50">
+          <div
+            className="relative mb-4 flex-1 rounded-2xl border border-cyan-100 bg-[#f5f1e6]"
+            style={{
+              backgroundImage: `url(${mapImage})`,
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+            }}
+          >
             {Object.entries(ZONE_COORDS).map(([zone, pos]) => {
               const isCurrent = zone === currentZone
               const isSolved = solvedZones.has(zone)
